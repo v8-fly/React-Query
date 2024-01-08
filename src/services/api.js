@@ -29,3 +29,18 @@ export const deleteTodo = async (id) => {
 export const getProjects = async (page = 1) => {
   return (await axiosInstance.get(`projects?_page=${page}&_limit=3`)).data
 }
+
+/***
+ * Fetch onScroll
+ *
+ */
+
+export const getProducts = async ({ pageParam }) => {
+  console.log("pageParam", pageParam)
+  return (await axiosInstance.get(`products?_page=${pageParam + 1}&_limit=3`))
+    .data
+}
+
+export const getProduct = async (id) => {
+  return (await axiosInstance.get(`products/${id}`)).data
+}

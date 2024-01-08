@@ -1,10 +1,12 @@
 import Todos from "./components/Todos"
 import PaginationProjects from "./components/PaginationProjects"
+import FetchOnScroll from "./components/FetchOnScroll"
 
 function App() {
   return (
     <>
-      <PaginationProjects />
+      <FetchOnScroll />
+      {/* <PaginationProjects /> */}
       {/* <Todos /> */}
     </>
   )
